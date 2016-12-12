@@ -9,35 +9,51 @@ rotateByThetaMatrix= [cos(theta)  -sin(theta) 0
                           0            0      1];
 
 %------------------------------------------------------------------------------
-%
-% Example: y = -x^2 + C
-%
-% Create a sample list of (x, y= -x^2, constant) points 
+%{
+Example: 
+
+[x y 1]'  = [a  0  1 ;  * [t t^2 1]'
+             0  b  1 ;
+             0  0  1 ]
+
+and for the rotated case:
+
+[x y 1]'  = rotationMatrix * coefficentsMatrix  * [t t^2 1]'
+%}
+
+
+% let a=b=1
+
 unrotatedXYs= [
-  -3  -9  1
-  -2  -4  1
-  -1  -1  1
+  -3   9  1
+  -2   4  1
+  -1   1  1
    0   0  1
-   1  -1  1
-   2  -4  1
-   3  -9  1
-   4  -16 1
-   5  -25 1
+   1   1  1
+   2   4  1
+   3   9  1
+   4  16  1
+   5  25  1
   ];
-randomJitter=[ rand(rows(unrotatedXYs),2) ones(rows(unrotatedXYs),1)];
+
+coefficients= ones(3);
+
+tfeatures= unrotatedXYs;
+
+randomJitter=[ rand(rows(tfeatures),2) ones(rows(tfeatures),1)];
 
 for angle = [0 theta]
 
   if(angle == 0)
-    rotated_xy= unrotatedXYs + randomJitter;
+    rotated_tfeatures= tfeatures + randomJitter;
   else
     % Rotate the [x y 1] vectors by Theta 
     % which is done by the magic of matrix multiplication
-    rotated_xy= unrotatedXYs * rotateByThetaMatrix;
+    rotated_tfeatures= tfeatures * rotateByThetaMatrix;
   endif
 
-  rotated_x= rotated_xy(:,1);
-  rotated_y= rotated_xy(:,2);
+  rotated_x= rotated_tfeatures(:,1);
+  rotated_y= rotated_tfeatures(:,2);
 
 
   % Create features for regression learning as [rotated-x rotated-x^2]
@@ -66,7 +82,7 @@ for angle = [0 theta]
     title('Rotated quadratics aren''t that hard')
   endif
   hold on
-  plot(rotated_xy(:,1), rotated_xy(:,2), '-.k+') % data for which we found the best fit
+  plot(rotated_tfeatures(:,1), rotated_tfeatures(:,2), '-.k+') % data for which we found the best fit
   hold off
 
 endfor

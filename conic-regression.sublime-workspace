@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"reg",
+				"regExNumber"
+			],
+			[
 				"The",
 				"Theta2"
 			],
@@ -356,10 +360,6 @@
 				"zeroThenOnes"
 			],
 			[
-				"reg",
-				"regPenaltyDeriv"
-			],
-			[
 				"all",
 				"all_theta"
 			],
@@ -419,7 +419,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 227.0,
+		"height": 147.0,
 		"last_filter": "insta",
 		"selected_items":
 		[
@@ -440,7 +440,7 @@
 				"Snippet: html"
 			]
 		],
-		"width": 485.0
+		"width": 449.0
 	},
 	"console":
 	{
@@ -472,22 +472,23 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/carrolls/Desktop/Software/Octave/linear regression inc poly features"
+		"/Users/carrolls/Desktop/Software/Octave/conic-regression"
 	],
 	"file_history":
 	[
-		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex5/ex5/linearRegression.m",
-		"/Users/carrolls/Desktop/Software/Octave/linear regression inc poly features/ex5.sublime-project",
-		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex5/ex5/ex5.m",
-		"/Users/carrolls/Desktop/Software/elm/elm-koans/src/Koans/AboutLiterals.elm",
-		"/Users/carrolls/Desktop/Software/elm/elm-koans/src/Koans/AboutExpects.elm",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/Learner1BestSoFarMatrices.mattxt",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/nnprofiler.m",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/Learner1 93pc 12-04 11-11.mattxt",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/analyseLine.m",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/parseLine.m",
+		"/Users/carrolls/Desktop/Software/Octave/conic-regression/conic-regression.sublime-project",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/learner/predict.m",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/nnprofiler.m",
+		"/Users/carrolls/Desktop/bake off notes.txt",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/sentencesJobDone.txt",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/learner1trainingsets.mattxt",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/CSharp Language Specification 3.0.txt",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/analyseLineScript.m",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/analyseLine.m",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/loadLearner1.m",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/Learner1BestSoFarMatrices.mattxt",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/Learner1 93pc 12-04 11-11.mattxt",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/parseLine.m",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/createLearner1TrainingSets.m",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/sentencesJobNotDone.txt",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/convert/ccdecodeTests.m",
@@ -500,7 +501,6 @@
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/convert/ccodeTests.m",
 		"/Users/carrolls/Desktop/Software/elm/Did-You-Get-The-Message-Commanding-the-Elm-Architecture/package.json",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/evaluate/validationCurveNN.m",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/sentencesJobDone.txt",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/singlewords excluding synonyms of done.txt",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/singlewords.txt",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/learner/fmincg.m",
@@ -623,7 +623,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"pause",
 			"-1",
 			"-flintmax",
 			"permss",
@@ -874,10 +873,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.elm_type":
-	{
-		"height": 0.0
-	},
 	"output.exec":
 	{
 		"height": 313.0
@@ -891,7 +886,7 @@
 		"height": 37.0
 	},
 	"pinned_build_system": "",
-	"project": "linear regression inc poly features.sublime-project",
+	"project": "conic-regression.sublime-project",
 	"replace":
 	{
 		"height": 54.0
