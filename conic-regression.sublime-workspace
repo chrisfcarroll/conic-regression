@@ -4,10 +4,6 @@
 		"selected_items":
 		[
 			[
-				"reg",
-				"regExNumber"
-			],
-			[
 				"The",
 				"Theta2"
 			],
@@ -360,6 +356,10 @@
 				"zeroThenOnes"
 			],
 			[
+				"reg",
+				"regPenaltyDeriv"
+			],
+			[
 				"all",
 				"all_theta"
 			],
@@ -419,10 +419,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 147.0,
-		"last_filter": "insta",
+		"height": 104.0,
+		"last_filter": "install",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -440,7 +444,7 @@
 				"Snippet: html"
 			]
 		],
-		"width": 449.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -472,23 +476,30 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/carrolls/Desktop/Software/Octave/conic-regression"
+		"/C/Users/Chris/Source/conic-regression",
+		"/C/Users/Chris/Source/conic-regression/src"
 	],
 	"file_history":
 	[
-		"/Users/carrolls/Desktop/Software/Octave/conic-regression/conic-regression.sublime-project",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/learner/predict.m",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/nnprofiler.m",
-		"/Users/carrolls/Desktop/bake off notes.txt",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/sentencesJobDone.txt",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/learner1trainingsets.mattxt",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/CSharp Language Specification 3.0.txt",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/analyseLineScript.m",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/analyseLine.m",
-		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/loadLearner1.m",
+		"/C/Program Files/Commands/ShiftPatternFinder/SPF UserInterface/UI VersionControl.txt",
+		"/C/Users/Chris/OneDrive/SA Notes.txt",
+		"/C/Users/Chris/OneDrive/Documents/To Dos.url",
+		"/C/Users/Chris/OneDrive/Documents/Travel Order Confirmation - 0300202959.docx",
+		"/C/Users/Chris/OneDrive/Documents/BootStrap  styling.txt",
+		"/C/Users/Chris/Source/conic-regression/src/createfakeparabolapoints.m",
+		"/C/Users/Chris/Source/conic-regression/conic-regression.sublime-project",
+		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex5/ex5/linearRegression.m",
+		"/Users/carrolls/Desktop/Software/Octave/linear regression inc poly features/ex5.sublime-project",
+		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex5/ex5/ex5.m",
+		"/Users/carrolls/Desktop/Software/elm/elm-koans/src/Koans/AboutLiterals.elm",
+		"/Users/carrolls/Desktop/Software/elm/elm-koans/src/Koans/AboutExpects.elm",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/Learner1BestSoFarMatrices.mattxt",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/nnprofiler.m",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/Learner1 93pc 12-04 11-11.mattxt",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/analyseLine.m",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/parseLine.m",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/learner/predict.m",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/loadLearner1.m",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/createLearner1TrainingSets.m",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/sentencesJobNotDone.txt",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/convert/ccdecodeTests.m",
@@ -501,6 +512,7 @@
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/convert/ccodeTests.m",
 		"/Users/carrolls/Desktop/Software/elm/Did-You-Get-The-Message-Commanding-the-Elm-Architecture/package.json",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/evaluate/validationCurveNN.m",
+		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/sentencesJobDone.txt",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/singlewords excluding synonyms of done.txt",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/data/singlewords.txt",
 		"/Users/carrolls/Desktop/Software/NetNetRunner/Learner1Octave/src/learner/fmincg.m",
@@ -596,14 +608,7 @@
 		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex2/ex2/costFunctionReg.m",
 		"/Users/carrolls/OneDrive/My Notes/Software Architecture/Udi dahan on SA on vimeo 2016.txt",
 		"/Users/carrolls/Applications/upz600",
-		"/Users/carrolls/Applications/upZino",
-		"/Users/carrolls/Library/Preferences/com.apple.dock.plist",
-		"/Users/carrolls/Downloads/application-pdf",
-		"/Users/carrolls/RiderProjects/BugDemos/Program.cs",
-		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex2/ex2/predict.m",
-		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex2/ex2/costFunction.m",
-		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex2/ex2/ex2.m",
-		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex2/ex2/plotData.m"
+		"/Users/carrolls/Applications/upZino"
 	],
 	"find":
 	{
@@ -623,6 +628,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"inputXYs",
+			"pause",
 			"-1",
 			"-flintmax",
 			"permss",
@@ -750,6 +757,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"inputs",
 			"-1",
 			"padShortSentence",
 			"jobNotDone",
@@ -873,6 +881,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.elm_type":
+	{
+		"height": 0.0
+	},
 	"output.exec":
 	{
 		"height": 313.0
@@ -889,7 +901,7 @@
 	"project": "conic-regression.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -927,7 +939,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 312.0,
+	"side_bar_width": 319.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
