@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"sort",
+				"sortrows\tGNUOct func"
+			],
+			[
+				"extrapolated",
+				"extrapolatedt1"
+			],
+			[
 				"xToExtr",
 				"xToExtrapolate"
 			],
@@ -484,10 +492,12 @@
 	},
 	"expanded_folders":
 	[
-		"/B/Users/Chris/Source/conic-regression"
+		"/B/Users/Chris/Source/conic-regression",
+		"/B/Users/Chris/Source/conic-regression/src"
 	],
 	"file_history":
 	[
+		"/B/Users/Chris/Source/conic-regression/src/parametricConic.m",
 		"/C/Users/Chris/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
 		"/C/ProgramFiles/MinGW/libexec/mingw-get/shlink.js",
 		"/D/Install Something/install.ini",
@@ -614,8 +624,7 @@
 		"/Applications/Pharo5.0.app/Contents/Resources/Squeak VM.r",
 		"/Users/carrolls/Desktop/Home/Other Work/PD/Quotes.txt",
 		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex3/ex3/ex3_nn.m",
-		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex3/ex3/predictOneVsAll.m",
-		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex3/ex3/oneVsAll.m"
+		"/Users/carrolls/Desktop/Courses/Coursera ML/machine-learning-ex3/ex3/predictOneVsAll.m"
 	],
 	"find":
 	{
@@ -635,6 +644,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"rotatedParabolaWithJitter",
+			"extrapolated",
 			"rotatedXYs",
 			"extrapolatedXY",
 			"extrapolatedt",
@@ -760,8 +771,7 @@
 			"assert",
 			"countChars",
 			"count",
-			"GB",
-			"buffer"
+			"GB"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -769,6 +779,8 @@
 		"regex": true,
 		"replace_history":
 		[
+			"createRotatedParabolaWithJitter",
+			"extra",
 			"rotatedSourceData",
 			"extrapolatedXY1",
 			"xToExtrapolate",
@@ -918,7 +930,7 @@
 	"project": "conic-regression.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":

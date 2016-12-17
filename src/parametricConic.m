@@ -1,18 +1,15 @@
 %------------------------------------------------------------------------------
 %
-% Create fake data for points approximately on a parabola which is at an theta theta from 'straight up'
+% 1) Create fake data for points approximately on a parabola 
+%    at an angle theta from 'straight up'
+% 2) Then solve the regression coefficients on the assumption that 
+%    it s indeed a parabola and show that we can extrapolate it.
+%   
 %
-%{
-Example: 
-[x y 1]'  = [a  0  1 ;  * [t t^2 1]'
-             0  b  1 ;
-             0  0  1 ]
-and for the rotated case:
-[x y 1]'  = coefficentsMatrix  * rotationMatrix * [t t^2 1]'
-%}
-"creating data"
+"..."
 
-function xy1= rotatedParabolaWithJitter(theta, x0=-3, y0=10, from=-4, to=4)
+%-------------------------------------------------------------------------------
+function xy1= createRotatedParabolaWithJitter(theta, x0=-3, y0=10, from=-4, to=4)
 
   cTheta= cos(theta); 
   sTheta= sin(theta);
@@ -20,7 +17,6 @@ function xy1= rotatedParabolaWithJitter(theta, x0=-3, y0=10, from=-4, to=4)
       [ cTheta  -sTheta  x0 
         sTheta   cTheta  y0
              0        0   1 ];
-
   unrotatedParabola= [
     -4  16  1
     -3   9  1
@@ -32,15 +28,15 @@ function xy1= rotatedParabolaWithJitter(theta, x0=-3, y0=10, from=-4, to=4)
      3   9  1
      4  16  1
     ];
-  randomJitter=[ 1/10 * rand(rows(unrotatedParabola),2)-0.5 zeros(rows(unrotatedParabola),1)]; % Jitter the x & y but not the 1 column
+  randomJitter=[ (rand(rows(unrotatedParabola),2)-0.5)/5 zeros(rows(unrotatedParabola),1)]; % Jitter the x & y but not the 1 column
 
   xy1= (unrotatedParabola + randomJitter) * rotateByThetaAndTranslateByX0Y0';
 
 endfunction
-
+%-------------------------------------------------------------------------------
 
 figureNumber=0;
-for theta = [0 pi/12 pi/4]
+for theta = [0 pi/12 pi/4 -pi/4 pi*3.25 -pi *2/3]
   figureNumber++; fprintf('%i) Theta=%d\n', figureNumber ,theta);
   
   X=unrotatedParabola= [
@@ -55,7 +51,7 @@ for theta = [0 pi/12 pi/4]
      6  36  1
     ];
 
-  y=rotated_tfeatures= rotatedParabolaWithJitter(theta, 3,7, from=-4, to=+4);
+  y=rotated_tfeatures= createRotatedParabolaWithJitter(theta, 3,7, from=-4, to=+4);
 
   % Solve it in one line
   coefficients = (X' * X) \ X' * y; 
