@@ -12,7 +12,7 @@ and for the rotated case:
 %}
 "creating data"
 
-function xy1= rotatedParabolaWithJitter(theta, x0=0, y0=0, from=-4, to=4)
+function xy1= rotatedParabolaWithJitter(theta, x0=-3, y0=10, from=-4, to=4)
 
   cTheta= cos(theta); 
   sTheta= sin(theta);
@@ -32,7 +32,7 @@ function xy1= rotatedParabolaWithJitter(theta, x0=0, y0=0, from=-4, to=4)
      3   9  1
      4  16  1
     ];
-  randomJitter=[ rand(rows(unrotatedParabola),2)/2-0.5 zeros(rows(unrotatedParabola),1)]; % Jitter the x & y but not the 1 column
+  randomJitter=[ 1/10 * rand(rows(unrotatedParabola),2)-0.5 zeros(rows(unrotatedParabola),1)]; % Jitter the x & y but not the 1 column
 
   xy1= (unrotatedParabola + randomJitter) * rotateByThetaAndTranslateByX0Y0';
 
@@ -44,22 +44,22 @@ for theta = [0 pi/12 pi/4]
   figureNumber++; fprintf('%i) Theta=%d\n', figureNumber ,theta);
   
   X=unrotatedParabola= [
-    -4  16  1
     -3   9  1
     -2   4  1
-    -1   1  1
      0   0  1
      1   1  1
      2   4  1
      3   9  1
      4  16  1
+     5  25  1
+     6  36  1
     ];
 
   y=rotated_tfeatures= rotatedParabolaWithJitter(theta, 3,7, from=-4, to=+4);
 
   % Solve it in one line
   coefficients = (X' * X) \ X' * y; 
-  coefficients = round(coefficients * 1e12) / 1e12;
+  coefficients = round(coefficients * 1e12) / 1e12; % round to 12 decimal places so that nearly-integers get rounded to integers
   disp(coefficients);
 
   %extrapolate it
