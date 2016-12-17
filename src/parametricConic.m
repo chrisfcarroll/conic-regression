@@ -69,21 +69,6 @@ for theta = [0 pi/12 pi/4]
   extraX= extraXY(:,1);
   extraY= extraXY(:,2);
 
-  % extrat1 = ifelse(sTheta==0,
-  %   rangeXToExtrapolate - x0,
-  %   (-cTheta + sqrt(cTheta^2 - 4 * sTheta * (rangeXToExtrapolate - x0))) / 2 / sTheta
-  %   );
-  % extrat2 = ifelse(sTheta==0,
-  %   rangeXToExtrapolate - x0,
-  %   (-cTheta - sqrt(cTheta^2 - 4 * sTheta * (rangeXToExtrapolate - x0))) / 2 / sTheta
-  %   );
-
-  % tt = [ extrat1( imag(extrat1)==0 ) flip( extrat2( imag(extrat2)==0 ) )];
-  % xx= cTheta * tt - sTheta * tt.^2 + x0;
-  % yy= sTheta* tt + cTheta * tt.^2 + y0;
-  % extraX= xx;
-  % extraY= yy;
-
   % Show the original points and the extrapolation
   fprintf('\n');
   figure(figureNumber);
@@ -107,4 +92,22 @@ quadratic= @(xy, M)([xy 1] * M * [xy 1]'); % this calculates (ax^2 + bx + c - y)
 rotatedquadratic= @(xy, M, rotateByThetaAndTranslateByX0Y0)(
                     [xy 1] * rotateByThetaAndTranslateByX0Y0' * M * rotateByThetaAndTranslateByX0Y0 * [xy 1]');
 %
+%----------------------------------------------------------
+
+% Notes 2
+% calculating the extrapolation if you know theta
+% extrat1 = ifelse(sTheta==0,
+%   rangeXToExtrapolate - x0,
+%   (-cTheta + sqrt(cTheta^2 - 4 * sTheta * (rangeXToExtrapolate - x0))) / 2 / sTheta
+%   );
+% extrat2 = ifelse(sTheta==0,
+%   rangeXToExtrapolate - x0,
+%   (-cTheta - sqrt(cTheta^2 - 4 * sTheta * (rangeXToExtrapolate - x0))) / 2 / sTheta
+%   );
+
+% tt = [ extrat1( imag(extrat1)==0 ) flip( extrat2( imag(extrat2)==0 ) )];
+% xx= cTheta * tt - sTheta * tt.^2 + x0;
+% yy= sTheta* tt + cTheta * tt.^2 + y0;
+% extraX= xx;
+% extraY= yy;
 %----------------------------------------------------------
