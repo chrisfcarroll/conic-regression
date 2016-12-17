@@ -27,8 +27,9 @@ and for the rotated case:
   randomJitter=[ rand(rows(unrotatedParabola),2) ones(rows(unrotatedParabola),1)]; % Jitter the x & y but not the 1 column
 
 figureNumber=0;
-for theta = 0  % [0 pi/12 pi/4]
-  figureNumber++;
+for theta = [0 pi/12 pi/4]
+  figureNumber++; fprintf('%i) Theta=%d\n', figureNumber ,theta);
+  
 
   cTheta= cos(theta); sTheta= sin(theta); x0=10; y0=20;
   rotateByThetaAndTranslateByX0Y0 = ...
@@ -61,11 +62,11 @@ for theta = 0  % [0 pi/12 pi/4]
 
   extrapolatedt1 = ifelse(sTheta==0,
     rangeXToExtrapolate - x0,
-    (-cTheta + sqrt(cTheta^2 - 4 * sTheta * (x0 - rangeXToExtrapolate))) / 2 / sTheta
+    (-cTheta + sqrt(cTheta^2 - 4 * sTheta * (x0 - rangeXToExtrapolate))) / 2 / (sTheta||1)
     );
   extrapolatedt2 = ifelse(sTheta==0,
     rangeXToExtrapolate - x0,
-    (-cTheta - sqrt(cTheta^2 - 4 * sTheta * (x0 - rangeXToExtrapolate))) / 2 / sTheta
+    (-cTheta - sqrt(cTheta^2 - 4 * sTheta * (x0 - rangeXToExtrapolate))) / 2 / (sTheta||1)
     );
 
   extrapolatedXY = coefficients(1)*extrapolatedt1 + coefficients(2) * extrapolatedt1.^2 + coefficients(3);  
@@ -80,6 +81,7 @@ for theta = 0  % [0 pi/12 pi/4]
   plot(extrapolatedX, extrapolatedY, '-co')
   title( sprintf('Theta=%i deg, Black is original, blue is extrapolated', theta * 180/pi ));
   hold off
+
 endfor
 
 
